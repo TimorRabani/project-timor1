@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="docoment.css">
+</head>
+<body>
+  <div class="container">
+    <div class="justify-content-center align-items-center">
+        <div class="toy text-center">
+          toy route:
+        </div>
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-info">
+              get
+            </div>
+            <div class="col-5">
+              <a href="http://localhost:3000/toys">http://localhost:3000/toys</a>
+            </div>
+            <div class="col-5">
+              Get 10 toys by page number
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-info">
+              get
+            </div>
+            <div class="col-5">
+              <a href="http://localhost:3000/toys/cat/dol">http://localhost:3000/toys/cat/:catname</a>
+            </div>
+            <div class="col-5">
+              Get toys by Category-name. 10 toys by page number
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-info">
+              get
+            </div>
+            <div class="col-5">
+              <a href="http://localhost:3000/toys/search?s=best">http://localhost:3000/toys/search?s=</a>
+            </div>
+            <div class="col-5">
+              Search toys by name or information. 10 toys by page number
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-info">
+              get
+            </div>
+            <div class="col-5">
+              <a href="http://localhost:3000/toys/prices/?min=10&max=40">http://localhost:3000/toys/prices/?min= &max= </a>
+            </div>
+            <div class="col-5">
+              Get the toys between the mun and max values. 10 toys by page number
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-info">
+              get
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/toys/userToys</p>
+            </div>
+            <div class="col-5">
+              Get the user toys (must heve token) 10 toys by page number
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-success">
+              post
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/toys</p>
+            </div>
+            <div class="col-5">
+              Add a toy (must have token)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-warning">
+              put
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/toys/:editId</p>
+            </div>
+            <div class="col-5">
+              Edit a toy (must have token)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-danger">
+              delete
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/toys/:delId</p>
+            </div>
+            <div class="col-5">
+              Delete a toy (must have token)
+            </div>
+          </div>
+        </div>
+
+        <div class="user text-center">
+          user route:
+        </div>
+
+         <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-success">
+              post
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/users</p>
+            </div>
+            <div class="col-5">
+              Add a user. 
+              name(required),
+              email(required),
+              password(required),
+              role(USER),
+              date_created(now)
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 bt">
+          <div class="d-flex align-items-center justify-content-center text-center">
+            <div class="kind col-2 bg-success">
+              post
+            </div>
+            <div class="col-5">
+              <p>http://localhost:3000/users/login</p>
+            </div>
+            <div class="col-5">
+              log in. Email(required),
+              Password(required)
+            </div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</body>
+</html>

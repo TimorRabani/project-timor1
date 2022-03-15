@@ -1,0 +1,25 @@
+.box{
+    min-height: 500px;
+}
+.bt{
+    min-height: 60px;
+    border: none;
+    border-bottom: solid 1px lightblue;
+}
+.toy{
+    font-size: 1.5em;
+    background: lightblue;
+    min-height: 60px;
+}
+.kind{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.user{
+    font-size: 1.5em;
+    background: tan;
+    min-height: 60px; 
+}
