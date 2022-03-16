@@ -4,28 +4,6 @@ const { validateUser, UserModel, validateLogin, genToken } = require("../models/
 const { auth } = require("../middlewares/atuh");
 const router = express.Router();
 
-// router.get("/", (req,res) => {
-//   res.json({msg:"Users work!!"});
-// })
-
-
-// router.get("/authUser", auth , async(req,res) => {
-//   res.json({status:"ok",msg:"token valid"})
-// })
-
-router.get("/userInfo", auth , async(req,res) => {
-  try{
-    let data = await UserModel.findOne({_id:req.tokenData._id},{password:0})
-    res.json(data);
-  }
-  catch(err){
-    console.log(err);
-    res.status(500).json(err)
-  }
-
-})
-
-
 router.post("/", async(req,res) => {
   let validBody = validateUser(req.body);
   if(validBody.error){
@@ -40,7 +18,7 @@ router.post("/", async(req,res) => {
   }
   catch(err){
     if(err.code == 11000){
-      return res.status(400).json({code:11000,err_msg:"Email already in system try log in"})
+      return res.status(400).json({code:11000,err_msg:"Email is already in system try log in or change email"})
     }
     console.log(err);
     res.status(500).json(err);
